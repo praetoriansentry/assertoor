@@ -65,7 +65,11 @@ func (pool *Pool) newPoolClient(clientIdx uint16, endpoint *ClientConfig) (*Clie
 	}
 	client.resetContext()
 
-	go client.runClientLoop()
+	if endpoint.URL != "" {
+		go client.runClientLoop()
+	} else {
+		client.logger.Warnf("the consensus URL for %s is empty", endpoint.Name)
+	}
 
 	return &client, nil
 }
