@@ -26,6 +26,7 @@ import (
 	getwalletdetails "github.com/ethpandaops/assertoor/pkg/coordinator/tasks/get_wallet_details"
 	runcommand "github.com/ethpandaops/assertoor/pkg/coordinator/tasks/run_command"
 	runexternaltasks "github.com/ethpandaops/assertoor/pkg/coordinator/tasks/run_external_tasks"
+	runjsonrpc "github.com/ethpandaops/assertoor/pkg/coordinator/tasks/run_jsonrpc"
 	runshell "github.com/ethpandaops/assertoor/pkg/coordinator/tasks/run_shell"
 	runtaskbackground "github.com/ethpandaops/assertoor/pkg/coordinator/tasks/run_task_background"
 	runtaskmatrix "github.com/ethpandaops/assertoor/pkg/coordinator/tasks/run_task_matrix"
@@ -59,6 +60,7 @@ var AvailableTaskDescriptors = []*types.TaskDescriptor{
 	getwalletdetails.TaskDescriptor,
 	runcommand.TaskDescriptor,
 	runexternaltasks.TaskDescriptor,
+	runjsonrpc.TaskDescriptor,
 	runshell.TaskDescriptor,
 	runtaskbackground.TaskDescriptor,
 	runtaskmatrix.TaskDescriptor,
